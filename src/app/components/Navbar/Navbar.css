@@ -1,0 +1,40 @@
+.navbar-component{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 98.77vh;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid rgb(49, 49, 49);
+}
+
+.main-icons{
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    margin:20px 0 0 0;
+    font-size: 30px;
+    color: white;
+}
+
+.chat-icon{
+    margin: 20px 0 50px ;
+    color: white;
+}
+.menu-icon{
+    margin-top: 11em;
+    font-size: 30px;
+}
+.ichov:hover{
+    width: 45px;
+    height: 45px;
+    transition: width 0.5s;
+}
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+}

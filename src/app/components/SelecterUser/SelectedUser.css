@@ -1,0 +1,128 @@
+
+.selected-user-icon{
+    border-radius: 45px;
+    width: 45px;
+    height: 45px;
+}
+.userdm-name{
+    color: white;
+    padding-left: 10px;
+    font-weight: 100;
+    margin: 0;
+    font-size: 15px;
+}
+.user-header{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 0 15px 15px;
+   border-bottom:2px solid rgb(49, 49, 49);
+}
+.telephone-icon{
+    padding-right: 15px;
+}
+.camera-icon{
+    padding-right: 15px;
+}
+.userdm-icon{
+    color: white;
+    font-size: 25px;
+}
+.userdm-imgname{
+    display: flex;
+    align-items: center;
+}
+.dm-icon{
+    width: 30px;
+    border-radius: 30px;
+    height: 30px;
+}
+.dm-message1{
+    color: white;
+    margin: 0 0 0 10px;
+    justify-content: center;
+    display: flex;
+    background-color: #262626;
+    border-radius: 30px;
+    padding: 10px;
+    align-items: center;
+
+}
+.userdm-messages{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.me-messages{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.userdm-text1{
+    position: absolute;
+    top: 10em;
+    margin-left: 15px;
+}
+.userdm-text2{
+    position: absolute;
+    top: 30em;
+    margin-left: 15px;
+}
+.userdm-text3{
+    position: absolute;
+    top: 39em;
+    margin-left: 15px;
+}
+.userdm-text4{
+    position: absolute;
+    top: 48em;
+    margin-left: 15px;
+}
+.me-text1{
+    position: absolute;
+    top: 25em;
+    right: 1em;
+    margin-left: 15px;
+}
+.me-text2{
+    position: absolute;
+    top: 15em;
+    right: 1em;
+    margin-left: 15px;
+}
+.me-text3{
+    position: absolute;
+    top: 20em;
+    right: 1em;
+    margin-left: 15px;
+}
+.me-text4{
+    position: absolute;
+    top: 35em;
+    right: 1em;
+    margin-left: 15px;
+}
+.me-text5{
+    position: absolute;
+    top: 45em;
+    right: 1em;
+    margin-left: 15px;
+}
+.me-message1{
+    color: white;
+    margin: 0 0 0 10px;
+    justify-content: center;
+    display: flex;
+    background-color: #3797F0;
+    border-radius: 30px;
+    padding: 10px;
+    align-items: center;
+}
+.dm-footer{
+
+}
+.selected-user-dm{
+    display: flex;
+    justify-content: space-between;
+}
