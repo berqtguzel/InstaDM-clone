@@ -1,40 +1,82 @@
-.navbar-component{
+.navbar-component {
     display: flex;
     flex-direction: column;
     background-color: black;
-    height: 98.77vh;
     width: 80px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-right: 2px solid rgb(49, 49, 49);
-}
-
-.main-icons{
+    padding: 20px 0;
+    height: 100vh;
+  }
+  
+  .main-icons {
     display: flex;
     flex-direction: column;
-}
-.icon{
-    margin:20px 0 0 0;
+    align-items: center;
+  }
+  
+  .icon {
+    margin: 20px 0;
     font-size: 30px;
     color: white;
-}
-
-.chat-icon{
-    margin: 20px 0 50px ;
+  }
+  
+  .chat-icon {
     color: white;
-}
-.menu-icon{
-    margin-top: 11em;
+    font-size: 24px;
+  }
+  
+  .menu-icon {
     font-size: 30px;
-}
-.ichov:hover{
-    width: 45px;
-    height: 45px;
-    transition: width 0.5s;
-}
-.profile-photo{
+  }
+  
+  .ichov:hover {
+    opacity: 50%;
+  }
+  
+  .profile-photo {
     width: 30px;
     height: 30px;
-    margin-top: 20px;
-    border-radius: 30px;
-}
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-component {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .main-icons {
+      flex-direction: row;
+      align-items: center;
+      display: none;
+    }
+  .menu-open{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+    .icon {
+      margin: 0 10px;
+      font-size: 24px;
+    }
+  
+    .chat-icon {
+      font-size: 18px;
+    }
+  
+    .profile-photo {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .menu-icon {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+  }
+  

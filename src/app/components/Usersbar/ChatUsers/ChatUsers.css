@@ -1,54 +1,89 @@
-.chats{
-    margin: 0 0 0 0;
+.chats {
+    margin: 0;
     font-size: 18px;
     color: white;
-}
-.chat-text{
+  }
+  
+  .chat-text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.chat-name{
+  }
+  
+  .chat-name {
     color: white;
-}
-.request-text{
-    color: #A8A8A8;
+  }
+  
+  .request-text {
+    color: #a8a8a8;
     cursor: pointer;
-}
-.user-component{
+  }
+  
+  .user-component {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
-}
-.chat-message-name{
+  }
+  
+  .chat-message-name {
     display: flex;
     flex-direction: column;
-}
-.chat-lastmessage{
+  }
+  
+  .chat-lastmessage {
     margin: 5px 0 0 0;
-    color: #A8A8A8;
+    color: #a8a8a8;
     font-size: 14px;
-} 
-.user-message{
+  }
+  
+  .user-message {
     padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.user-message:hover{
-   background-color: #121212;
-}
-.message-user-icon{
-    margin-right:10px ;
+  }
+  
+  .user-message:hover {
+    background-color: #121212 ;
+  }
+  
+  .message-user-icon {
+    margin-right: 10px;
     width: 50px;
-    border-radius: 50px;
+    border-radius: 50%;
     height: 50px;
-
-}
-.tick-icon{
-    background-color: #0095F6;
+  }
+  
+  .tick-icon {
+    background-color: #0095f6;
     color: black;
     border-radius: 10px;
     font-size: 10px;
     margin-left: 4px;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .chat-text {
+      align-items: flex-start;
+    }
+  
+    .chats,
+    .request-text {
+      font-size: 16px;
+    }
+  
+    .user-component {
+      margin-top: 10px;
+    }
+  
+    .chat-name,
+    .chat-lastmessage {
+      font-size: 14px;
+    }
+  
+    .message-user-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

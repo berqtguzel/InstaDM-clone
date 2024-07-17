@@ -1,128 +1,186 @@
-
-.selected-user-icon{
-    border-radius: 45px;
+.selected-user-icon {
+    border-radius: 50%;
     width: 45px;
     height: 45px;
-}
-.userdm-name{
+  }
+  .userdm-name {
     color: white;
     padding-left: 10px;
     font-weight: 100;
     margin: 0;
     font-size: 15px;
-}
-.user-header{
+  }
+  .user-header {
     display: flex;
     flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   padding: 0 0 15px 15px;
-   border-bottom:2px solid rgb(49, 49, 49);
-}
-.telephone-icon{
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid rgb(49, 49, 49);
+  }
+  .telephone-icon,
+  .camera-icon,
+  .info-icon {
     padding-right: 15px;
-}
-.camera-icon{
-    padding-right: 15px;
-}
-.userdm-icon{
+    cursor: pointer;
+  }
+  .userdm-icon {
     color: white;
-    font-size: 25px;
-}
-.userdm-imgname{
+    font-size: 35px;
+  }
+  .userdm-imgname {
     display: flex;
     align-items: center;
-}
-.dm-icon{
+  }
+  .dm-icon {
     width: 30px;
-    border-radius: 30px;
+    border-radius: 50%;
     height: 30px;
-}
-.dm-message1{
+  }
+  .dm-message1 {
     color: white;
     margin: 0 0 0 10px;
-    justify-content: center;
     display: flex;
     background-color: #262626;
     border-radius: 30px;
     padding: 10px;
     align-items: center;
-
-}
-.userdm-messages{
+  }
+  .userdm-messages {
     display: flex;
     align-items: center;
     flex-direction: row;
-}
-.me-messages{
+    margin: 10px 0;
+  }
+  .me-messages {
     display: flex;
     align-items: center;
     flex-direction: row;
-}
-.userdm-text1{
-    position: absolute;
-    top: 10em;
-    margin-left: 15px;
-}
-.userdm-text2{
-    position: absolute;
-    top: 30em;
-    margin-left: 15px;
-}
-.userdm-text3{
-    position: absolute;
-    top: 39em;
-    margin-left: 15px;
-}
-.userdm-text4{
-    position: absolute;
-    top: 48em;
-    margin-left: 15px;
-}
-.me-text1{
-    position: absolute;
-    top: 25em;
-    right: 1em;
-    margin-left: 15px;
-}
-.me-text2{
-    position: absolute;
-    top: 15em;
-    right: 1em;
-    margin-left: 15px;
-}
-.me-text3{
-    position: absolute;
-    top: 20em;
-    right: 1em;
-    margin-left: 15px;
-}
-.me-text4{
-    position: absolute;
-    top: 35em;
-    right: 1em;
-    margin-left: 15px;
-}
-.me-text5{
-    position: absolute;
-    top: 45em;
-    right: 1em;
-    margin-left: 15px;
-}
-.me-message1{
+    justify-content: flex-end;
+    margin: 10px 0;
+  }
+  .me-message1 {
     color: white;
-    margin: 0 0 0 10px;
-    justify-content: center;
+    margin: 0 10px 0 0;
     display: flex;
-    background-color: #3797F0;
+    background-color: #3797f0;
     border-radius: 30px;
     padding: 10px;
     align-items: center;
-}
-.dm-footer{
-
-}
-.selected-user-dm{
+  }
+  .dm-footer {
     display: flex;
+    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+  }
+  .footer-input {
+    color: white;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    flex: 1;
+  }
+  .footer-icons {
+    display: flex;
+    color: white;
+    font-size: 25px;
+  }
+  .text-input {
+    border: none;
+    background: none;
+    height: 35px;
+    color: white;
+    width: 100%;
+  }
+  .text-input:focus {
+    outline: none;
+  }
+  .hearth-icon {
+    padding-left: 5px;
+  }
+  .mic-icon {
+    padding-right: 5px;
+  }
+  .smiley-icon {
+    margin-right: 10px;
+  }
+  .footer-open{
+    display: none;
+  }
+ 
+
+  
+  @media (max-width: 768px) {
+    .user-header {
+        align-items: center;
+    }
+    .userdm-icon {
+      font-size: 20px;
+    }
+    .telephone-icon,
+    .camera-icon,
+    .info-icon {
+      padding-right: 5px;
+    }
+    .userdm-name {
+      font-size: 12px;
+    }
+    .dm-message1,
+    .me-message1 {
+      font-size: 12px;
+      padding: 8px;
+    }
+    .footer-input {
+      font-size: 20px;
+    }
+    .footer-icons {
+      font-size: 20px;
+    }
+  }
+  
+.footer-icons.hidden {
+    display: none;
+}
+
+.send-button {
+    display: none;
+    color: #3797F0;
+    font-size: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.send-button.visible {
+    display: block;
+}
+
+.text-input:focus + .footer-icons {
+    display: none;
+}
+
+.text-input:focus + .footer-icons + .send-button {
+    display: block;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-input {
+        font-size: 20px;
+    }
+    .footer-icons {
+        font-size: 20px;
+    }
+    .send-button {
+        font-size: 20px;
+    }
 }

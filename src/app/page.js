@@ -1,16 +1,16 @@
-import React from "react"
-import Navbar from "./components/Navbar/Navbar"
-import "./layout.css"
-import Users from "./components/Usersbar/Users"
-import Chatbar from "./components/Chatbar/Chatbar"
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import "./layout.css";
+import Users from "./components/Usersbar/Users";
+import Chatbar from "./components/Chatbar/Chatbar";
 
-function page() {
+function Page() {
   return (
     <div className="page">
-      <Navbar/>
-      <Chatbar/>
+      <Navbar />
+      <Chatbar />
     </div>
-  )
+  );
 }
 
-export default page
+export default Page;

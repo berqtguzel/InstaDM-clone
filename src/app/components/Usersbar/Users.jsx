@@ -1,11 +1,10 @@
 "use client";
 import "./Users.css";
-import { useState } from "react";
 import { TbMessage2Plus } from "react-icons/tb";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { FaRegUserCircle } from "react-icons/fa";
-import ChatUsers from "./ChatUsers/ChatUsers";
 import Image from "next/image";
+import React from "react";
+
 const Users = ({ onUserClick }) => {
   const users = [
     {
@@ -53,14 +52,13 @@ const Users = ({ onUserClick }) => {
       </div>
       <div className="users-music">
         {users.map((user) => (
-          <div className="users">
+          <div key={user.key} className="user-item">
             <div className="notes">{user.note}</div>
             <Image
               src={require(`../../assets/profile/${user.photo}.png`)}
               alt=""
               className="user-icon"
             />
-
             <p className="profile-name">{user.name}</p>
           </div>
         ))}

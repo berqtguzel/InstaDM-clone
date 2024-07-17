@@ -1,4 +1,3 @@
-// ChatUsers.js
 "use client";
 import React from "react";
 import "./ChatUsers.css";
@@ -8,7 +7,7 @@ import Image from "next/image";
 const ChatUsers = ({ onUserClick }) => {
   const chatUsers = [
     {
-      tick: "true",
+      tick: true,
       photo: "begüm",
       name: "Begüm Gül Karakoyun",
       key: "1",
@@ -23,10 +22,10 @@ const ChatUsers = ({ onUserClick }) => {
       name: "Aybike Göçer",
       key: "2",
       lastmessage: "Sen: Hee",
-      message1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      message2: "Lorem ipsum",
-      message3: "Lorem ipsum dolor sit, amet",
-      message4: "Lorem ipsum dolor sit,",
+      message1: "Lorem ipsum dolor sit, amet ",
+      message2: "Lorem ",
+      message3: "Lorem ipsum ",
+      message4: "Lorem  dolor sit,",
     },
     {
       photo: "emre",
@@ -34,7 +33,7 @@ const ChatUsers = ({ onUserClick }) => {
       key: "3",
       lastmessage: "Sen: Ho",
       message1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      message2: "Lorem ipsum",
+      message2: "Lorem ipsum dolor",
       message3: "Lorem ipsum dolor sit, amet",
       message4: "Lorem ipsum dolor sit,",
     },
@@ -43,20 +42,20 @@ const ChatUsers = ({ onUserClick }) => {
       name: "Elif Naz Demir",
       key: "4",
       lastmessage: "Bir Reels Videosu Gönderdi",
-      message1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      message2: "Lorem ipsum",
-      message3: "Lorem ipsum dolor sit, amet",
-      message4: "Lorem ipsum dolor sit,",
+      message1: "Lorem consectetur adipisicing elit",
+      message2: "Lorem ipsum dolor sit, amet",
+      message3: "Lorem ipsum dolor ",
+      message4: "Lorem ipsum dolor ,",
     },
     {
       photo: "yusuf",
       name: "Yusuf Öz",
       key: "5",
       lastmessage: "Sen: Adamım Be",
-      message1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      message2: "Lorem ipsum",
+      message1: "Lorem adipisicing elit",
+      message2: "Lorem ipsum sit",
       message3: "Lorem ipsum dolor sit, amet",
-      message4: "Lorem ipsum dolor sit,",
+      message4: "Lorem ,",
     },
   ];
 
