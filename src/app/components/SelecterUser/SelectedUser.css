@@ -3,6 +3,11 @@
     width: 45px;
     height: 45px;
   }
+  .selected-user{
+    max-height: 100em; 
+    min-height: 50em;
+    overflow-y: scroll;
+  }
   .userdm-name {
     color: white;
     padding-left: 10px;
@@ -143,35 +148,21 @@
     }
   }
   
-.footer-icons.hidden {
-    display: none;
-}
-
-.send-button {
-    display: none;
-    color: #3797F0;
-    font-size: 20px;
-    padding-right: 10px;
-    cursor: pointer;
-}
-
-.send-button.visible {
-    display: block;
-}
-
-.text-input:focus + .footer-icons {
-    display: none;
-}
-
-.text-input:focus + .footer-icons + .send-button {
-    display: block;
-}
-
-.text-input:focus {
-    outline: none;
-}
-
-
+    .footer-icons.hidden {
+        display: none;
+    }
+    .send-button{
+        color: #3797f0;
+        cursor: pointer;
+    }   
+    .hidden {
+        display: none;
+     }
+  
+    .visible {
+        display: block;
+     }
+  
 
 @media (max-width: 768px) {
     .footer-input {

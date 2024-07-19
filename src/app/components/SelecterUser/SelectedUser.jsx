@@ -12,19 +12,54 @@ import { CiHeart } from "react-icons/ci";
 
 const SelectedUser = ({ user }) => {
   const [isFocused, setIsFocused] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [messages, setMessages] = useState([
+    {
+      photo: "berat",
+      message: "Lorem ipsum dolor sit amet",
+    },
+    {
+      photo: "berat",
+      message: "Lorem, ipsum dolor",
+    },
+    {
+      photo: "berat",
+      message: "Lorem, ipsum",
+    },
+    {
+      photo: "berat",
+      message: "Lorem, ipsum",
+    },
+    {
+      photo: "berat",
+      message: "Lorem",
+    },
+  ]);
 
   if (!user) return null;
 
-  const chatMe = [
-    {
-      photo: "berat",
-      message1: "Lorem ipsum dolor sit amet",
-      message2: "Lorem, ipsum dolor",
-      message3: "Lorem, ipsum",
-      message4: "Lorem, ipsum",
-      message5: "Lorem",
-    },
-  ];
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+    console.log("Input value changed: ", e.target.value);
+  };
+
+  const handleSendMessage = () => {
+    if (inputValue.trim() !== "") {
+      console.log("Sending message: ", inputValue);
+      setMessages([...messages, { photo: user.photo, message: inputValue }]);
+      console.log("Messages updated: ", [
+        ...messages,
+        { photo: user.photo, message: inputValue },
+      ]);
+      setInputValue("");
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSendMessage();
+    }
+  };
 
   return (
     <>
@@ -62,15 +97,11 @@ const SelectedUser = ({ user }) => {
             </div>
           )
         )}
-        {chatMe.map((me, meIndex) =>
-          Object.keys(me)
-            .filter((key) => key.startsWith("message"))
-            .map((key, index) => (
-              <div key={index} className={`me-messages me-text${index + 1}`}>
-                <p className="me-message1">{me[key]}</p>
-              </div>
-            ))
-        )}
+        {messages.map((me, index) => (
+          <div key={index} className={`me-messages me-text${index + 1}`}>
+            <p className="me-message1">{me.message}</p>
+          </div>
+        ))}
       </div>
       <div className="dm-footer">
         <div className="footer-input">
@@ -79,16 +110,22 @@ const SelectedUser = ({ user }) => {
             type="text"
             placeholder="Mesaj..."
             className="text-input"
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
           />
         </div>
-        <div className={`footer-icons ${isFocused ? "hidden" : ""}`}>
+        <div className={`footer-icons ${inputValue.trim() ? "hidden" : ""}`}>
           <GrMicrophone className="mic-icon" />
           <TbPhotoSquareRounded className="photos-icon" />
           <CiHeart className="hearth-icon" />
         </div>
-        <div className={`send-button ${isFocused ? "visible" : ""}`}>
+        <div
+          className={`send-button ${inputValue.trim() ? "visible" : "hidden"}`}
+          onClick={handleSendMessage}
+        >
           Gönder
         </div>
       </div>

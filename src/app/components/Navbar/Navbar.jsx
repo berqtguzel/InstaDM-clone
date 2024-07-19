@@ -22,7 +22,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar-component">
-      <h1 className="chat-icon">Chat</h1>
+      <h1 className="chat-icon">
+        <FaInstagram />
+      </h1>
       <div className={`main-icons ${menuOpen ? "menu-open" : ""}`}>
         <IoMdHome className="icon ichov" />
         <FaSearch className="icon ichov" />
